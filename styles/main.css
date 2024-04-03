@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-image: url("../images/Background.jpg");
+    background-attachment: fixed;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.504);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    border-bottom: 2px ridge goldenrod;
+    display: flex;
+    align-items: center;
+}
+
+header h2 {
+    color: red;
+    font-size: 300%;
+    text-shadow: 1px 1px 1px whitesmoke, -1px -1px -1px whitesmoke;
+}
+
+header img {
+    max-width: 300px;
+    padding: .75em;
+}
+
+/*Image Gallery*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.column img {
+    margin-top: 8px;
+    max-width: 100%;
+    border: 2px ridge goldenrod;
+    border-radius: 10px;
+}
+
+#cornerBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    padding: 1em 2em;
+    background-color: rgba(255, 0, 0, 0.389);
+    border: rgba(255, 0, 0, 0.295);
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-size: 120%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease-in-out 300ms;
+}
+
+#cornerBtn:hover {
+    background-color: black;
+    color: red;
+    border: 2px ridge goldenrod;
+}
+
+@media (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .column {
+    flex: 100%;
+    max-width: 100%;
+    }
+   .column img {
+    max-width: 100%;
+   }
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
